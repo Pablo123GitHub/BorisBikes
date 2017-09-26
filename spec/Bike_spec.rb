@@ -6,6 +6,6 @@ require './lib/Bike.rb'
 #   end
 # end
 
-context 'checks if a Bike is working' do
+describe 'checks if a Bike is working' do
   it { expect(Bike.new).to respond_to(:working?) }
 end
