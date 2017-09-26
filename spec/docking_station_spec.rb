@@ -9,7 +9,7 @@ describe DockingStation do
   end
 
   it "expects the bike to be working " do
-    expect(DockingStation.new.release_bike.working?).to be_instance_of(Bike)
+    expect(DockingStation.new.release_bike.working?).to eq true
 
   end
 
