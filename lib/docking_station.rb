@@ -17,7 +17,7 @@ class DockingStation
   end
 
 def foo
-
+return "this is a guard condition" if 10 <0 
  raise "this is a fail "
 
 
