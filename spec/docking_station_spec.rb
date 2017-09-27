@@ -25,8 +25,8 @@ describe DockingStation do
     expect(subject.bike).to eq bike
   end
 
-    it "raises" do
-    expect { DockingStation.new.foo }.to raise_error(NameError)
+    it "raises an error when foo is called " do
+    expect { DockingStation.new.foo }.to raise_error
    end
 
 
