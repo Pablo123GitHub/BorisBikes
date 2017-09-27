@@ -1,4 +1,4 @@
-require './lib/Bike.rb'
+require 'Bike'
 #
 # describe 'Bike' do
 #   it 'checks if a Bike is working' do

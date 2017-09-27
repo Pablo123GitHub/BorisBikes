@@ -1,8 +1,9 @@
-require './lib/Bike.rb'
+require_relative './Bike.rb'
 
 class DockingStation
 
   attr_reader :bike
+
   def release_bike
     @bike = Bike.new
 

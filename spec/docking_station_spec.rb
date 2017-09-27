@@ -1,4 +1,4 @@
-require './lib/docking_station.rb'
+require 'docking_station'
 describe DockingStation do
   it "expects to respond to the release_bike method" do
     expect(subject).to respond_to(:release_bike)
