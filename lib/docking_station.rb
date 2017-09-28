@@ -14,10 +14,6 @@ class DockingStation
 
   end
 
-def check_full?
-    fail 'DockingStation is full'
-
-end
 
 
 end
