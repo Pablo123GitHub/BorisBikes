@@ -16,6 +16,16 @@ describe DockingStation do
     end
   end
 
+  describe '#release_bike' do
+    it 'raises an error when the docking station is full' do
+      # Let's not dock a bike first:
+      # remember subject == DockingStation.new
+      expect { subject.check_full? }.to raise_error 'DockingStation is full'
+    end
+  end
+
+
+
 
 # since the DockingStation is no longer create new Bike instaces,
 # this test fails because we are no longer creating a new Bike object
@@ -39,7 +49,7 @@ describe DockingStation do
     it "raises an error when foo is called " do
     expect { DockingStation.new.foo }.to raise_error
    end
-   
+
 
 
 end
