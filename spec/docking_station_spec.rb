@@ -3,15 +3,26 @@ describe DockingStation do
   it "expects to respond to the release_bike method" do
     expect(subject).to respond_to(:release_bike)
   end
-  it "expects to get a bike upon calling release_bike method " do
-    expect(subject.release_bike).to be_instance_of(Bike)
+  # it "expects to get a bike upon calling release_bike method " do
+  #   expect(subject.release_bike).to be_instance_of(Bike)
+  #
+  # end
 
+  describe '#release_bike' do
+    it 'raises an error when there are no bikes available' do
+      # Let's not dock a bike first:
+      # remember subject == DockingStation.new
+      expect { subject.release_bike }.to raise_error 'No bikes available'
+    end
   end
 
-  it "expects the bike to be working " do
-    expect(subject.release_bike.working?).to eq true
 
-  end
+# since the DockingStation is no longer create new Bike instaces,
+# this test fails because we are no longer creating a new Bike object
+  # it "expects the bike to be working " do
+  #   expect(subject.release_bike.working?).to eq true
+  #
+  # end
 
   it do
     is_expected.to respond_to(:dock).with(1).argument
