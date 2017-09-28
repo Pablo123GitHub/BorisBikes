@@ -39,6 +39,7 @@ describe DockingStation do
     it "raises an error when foo is called " do
     expect { DockingStation.new.foo }.to raise_error
    end
+   
 
 
 end
