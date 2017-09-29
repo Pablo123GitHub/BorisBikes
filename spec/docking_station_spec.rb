@@ -41,8 +41,9 @@ describe DockingStation do
 
   it "docks something " do
     bike = Bike.new
-   docking_station =  DockingStation.new(10).dock(bike)
-    expect(docking_station).to match [bike]
+    docking_station = DockingStation.new(10)
+    docking_station.dock(bike)
+    expect(docking_station.bike[-1]).to match bike
   end
 
   describe '#initialize' do
