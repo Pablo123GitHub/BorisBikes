@@ -48,12 +48,27 @@ docking_station = DockingStation.new(DockingStation::DEFAULT_CAPACITY)
   end
 
   describe '#initialize' do
-    it 'needs to take a capacity argument' do
-      # Let's not dock a bike first:
-      # remember subject == DockingStation.new
+    # it 'needs to take a capacity argument' do
+    #   # Let's not dock a bike first:
+    #   # remember subject == DockingStation.new
+    #
+    #       end
+  #
+  #   it "take an arg upon instanciation " do
+  #   expect(DockingStation).to receive(:new).with(1)
+  # end
 
-      expect(DockingStation).to receive(:new).with(capacity)
-    end
+    # expect(B).to receive(:new).with(foo: 'whatever')
+      it 'has a default capacity of 20 ' do
+          expect(subject.capacity).to eq 20
+      end
+
+      it 'is possible to use a different capacity example new capacity == 30 ' do
+
+          expect(DockingStation.new(30).capacity).to eq 30
+      end
+
+
   end
 
 
