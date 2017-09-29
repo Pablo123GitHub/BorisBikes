@@ -60,7 +60,7 @@ docking_station = DockingStation.new(DockingStation::DEFAULT_CAPACITY)
 
     # expect(B).to receive(:new).with(foo: 'whatever')
       it 'has a default capacity of 20 ' do
-          expect(subject.capacity).to eq 20
+          expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
       end
 
       it 'is possible to use a different capacity example new capacity == 30 ' do
